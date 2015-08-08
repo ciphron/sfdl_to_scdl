@@ -1,0 +1,7 @@
+This is a compiler from the Simple Function Definition language (SFDL) v2, part of the the FairplayMP project (http://www.cs.huji.ac.il/project/Fairplay/FairplayMP.html), to Simple Circuit Description Language (SCDL) (https://github.com/ciphron/scdl). More precisely, this program runs the SFDL v2 compiler (in the sfdl2_compiler directory) which converts SFDL to Simple Hardware Description Language (SHDL) and then translates the SHDL description to SCDL. Note that you must have Java installed, which is required by the SFDLv2 compiler. Furthermore, to compile the program, you need libjson. Run make to compile the program. Then to compile an SFDL file, for example the included example max.sfdl, run:
+
+./compile max.sfdl
+
+This produces two files: max.scdl and max.scdl.vars. The first is a circuit representation in SCDL and the second is an associated vars file that describes the high-level types of the inputs and outputs to the SCDL program. For more information on SCDL and the format of a vars file, see the documentation at https://github.com/ciphron/scdl/blob/master/scdl.pdf. You can then use the SCDL evaluator at https://github.com/ciphron/scdl to evaluate the circuit described by the SCDL file.
+
+This program is released under the terms of the GPL v3 (see the included LICENSE file).
